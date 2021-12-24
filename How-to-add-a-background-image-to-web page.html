@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html dir="ltr" lang="ru">
+
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-bottom: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+</style>
+</head>
+<body bgcolor="#808080">
+
+<div class="navbar">
+  <a href="#home">Новости</a>
+  <a href="#news">Меню</a>
+  <a href="#contact">Команды</a>
+</div>
+
+<div><table class="data browser"><tbody><tr class="br"><td><span class="ie">Internet Explorer</span></td><td><span class="cr">Chrome</span></td><td><span class="op">Opera</span></td><td><span class="sa">Safari</span></td><td><span class="fx">Firefox</span></td><td><span class="an">Android</span></td><td><span class="ip">iOS</span></td></tr><tr class="sp"><td class="yes"><span>4.0+</span></td><td class="yes"><span>1.0+</span></td><td class="yes"><span>3.5+</span></td><td class="yes"><span>1.0+</span></td><td class="yes"><span>1.0+</span></td><td class="yes"><span>1.0+</span></td><td class="yes"><span>1.0+</span></td></tr></tbody></table><p>Чтобы добавить фоновую картинку на веб-страницу, задайте  путь к изображению внутри значения <span class="value">url</span> стилевого свойства <span class="attribute">background</span>,  которое в свою очередь добавляется к селектору <span class="tag">body</span>.</p><p>Общий синтаксис добавления фона следующий.</p><pre style="display: none;"><code class="no-buttons">&lt;style&gt;
+  body { background: url(путь к файлу); }
+&lt;/style&gt;</code></pre><pre><code class="no-buttons html"><span class="tag">&lt;<span class="keyword">style</span>&gt;</span><span class="css">
+  <span class="keyword">body</span> <span class="rules">{ <span class="rule"><span class="keyword">background</span>:<span class="value"> <span class="function">url(<span class="params">путь к файлу</span>)</span></span>;</span> }</span>
+</span><span class="tag">&lt;/<span class="keyword">style</span>&gt;</span></code></pre><p>Путь к графическому файлу будет различаться, в зависимости  от того, где он располагается относительно текущего документа. Например, если HTML-документ и рисунок с именем bg.gif хранятся  в одной папке, то достаточно задать <span class="value">url(bg.gif)</span>.</p><p>При добавлении фоновой картинки учтите, что изображение  загружается не сразу, поэтому цвет фона должен быть таким, чтобы сохранить  достаточный контраст между цветом текста и фона. Лучше всего устанавливать цвет  фона близким к цвету фонового рисунка, здесь опять же поможет универсальное  свойство <span class="attribute">background</span>,  как показано в примере&nbsp;1.</p><p class="exampleTitle">Пример 1. Добавление фона</p><p class="example-support"><span class="html yes">HTML5</span><span class="css yes">CSS 2.1</span><span class="yes">IE</span><span class="yes">Cr</span><span class="yes">Op</span><span class="yes">Sa</span><span class="yes">Fx</span></p><pre id="example_0_c" style="display: none;"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Фон&lt;/title&gt;
+  &lt;style&gt;
+   body {
+    background: #c7b39b url(images/bg.jpg); /* Цвет фона и путь к файлу */
+    color: #fff; /* Цвет текста */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;...&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre><div class="htmlbook-code"><pre><code class=" html"><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="keyword">html</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">meta</span><span class="attribute"> charset=<span class="value">"utf-8"</span></span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">title</span>&gt;</span>Фон<span class="tag">&lt;/<span class="keyword">title</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">style</span>&gt;</span><span class="css">
+   <span class="keyword">body</span> <span class="rules">{
+    <span class="rule"><span class="keyword">background</span>:<span class="value"> <span class="hexcolor">#c7b39b</span> <span class="function">url(<span class="params">images/bg.jpg</span>)</span></span>;</span> <span class="comment">/* Цвет фона и путь к файлу */</span>
+    <span class="rule"><span class="keyword">color</span>:<span class="value"> <span class="hexcolor">#fff</span></span>;</span> <span class="comment">/* Цвет текста */</span>
+   }</span>
+  </span><span class="tag">&lt;/<span class="keyword">style</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">head</span>&gt;</span>
+ <span class="tag">&lt;<span class="keyword">body</span>&gt;</span>
+  <span class="tag">&lt;<span class="keyword">p</span>&gt;</span>...<span class="tag">&lt;/<span class="keyword">p</span>&gt;</span>
+ <span class="tag">&lt;/<span class="keyword">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="keyword">html</span>&gt;</span></code></pre><div class="example-view"></div></div><p>В данном примере фон веб-страницы задан цветом хаки, а текст&nbsp;—  белым. Также добавлено фоновое изображение, которое при загрузке закрывает  собой фоновый цвет.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+
+<script src="https://vk.com/js/api/openapi.js?169" type="text/javascript"></script>
+
+
+
+
+<script type="text/javascript">
+      VK.init({
+        apiId: ВАШ_API_ID,
+        onlyWidgets: true
+      });
+</script>
+
+
+
+<div id="vk_comments"></div>
+<script type="text/javascript">
+  VK.Widgets.Comments('vk_comments');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
