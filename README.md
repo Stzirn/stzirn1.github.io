@@ -1,1 +1,1 @@
-# stzirn.gitbut.io
+# stzirn.github.io
